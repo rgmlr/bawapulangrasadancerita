@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cipancar Local — Bawa Pulang Rasa & Cerita dari Kampung Kami</title>
+
+<!-- Meta SEO & Preview WhatsApp (Open Graph) -->
+<meta name="description" content="Produk lokal, hasil bumi, dan buah tangan pilihan dari Desa Cipancar, Serangpanjang, Subang. Keripik Pisang, Nanas Simadu, Gula Aren, Alpukat, Madu Hutan, dan Paket Oleh-Oleh Rombongan.">
+<meta property="og:title" content="Cipancar Local — Bawa Pulang Rasa & Cerita">
+<meta property="og:description" content="Oleh-oleh khas, hasil bumi petani lokal, paket rombongan sekolah, dan suplai hospitality villa & resort di Desa Cipancar, Subang.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1C3A27">
+
+<!-- Favicon Otomatis -->
+<link id="dynamic-favicon" rel="icon" type="image/png" href="">
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-main: #F6F4EE;
+    --bg-card: #EAE6DC;
+    --bg-card-light: #EFECE6;
+    --green-dark: #1C3A27;
+    --green-deeper: #12261A;
+    --text-main: #18201A;
+    --text-muted: #576359;
+  }
+
+  * { box-sizing: border-box; scroll-behavior: smooth; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 6%;
+    width: 100%;
+  }
+
+  .tag {
+    font-size: 11.5px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 700;
+    margin-bottom: 12px;
+    display: inline-block;
+  }
+  .handwritten { font-family: 'Caveat', cursive; font-weight: 600; line-height: 1.08; }
+  
+  .btn-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--green-dark);
+    color: #fff;
+    padding: 13px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.12);
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .btn-dark:hover {
+    background-color: var(--green-deeper);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(20, 42, 28, 0.22);
+  }
+  
+  .btn-outline-white {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    padding: 13px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.55);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .btn-outline-white:hover {
+    background-color: rgba(255,255,255,0.25);
+    transform: translateY(-2px);
+  }
+
+  /* 1. HERO */
+  .hero-wrapper {
+    position: relative;
+    width: 100%;
+    background-color: var(--green-deeper);
+    background-image: 
+      linear-gradient(90deg, rgba(14, 28, 19, 0.88) 0%, rgba(14, 28, 19, 0.55) 48%, rgba(14, 28, 19, 0.15) 100%),
+      var(--bg-hero-1),
+      var(--bg-hero-2);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    min-height: 86vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar-outer {
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 22px 6%;
+    max-width: 1320px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .brand-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: #fff;
+  }
+  .logo-img { height: 46px; width: auto; object-fit: contain; display: block; }
+  .brand-text { display: flex; flex-direction: column; line-height: 1.05; }
+  .brand-main { font-size: 19px; font-weight: 700; letter-spacing: 3px; }
+  .brand-sub { font-size: 9.5px; letter-spacing: 5px; opacity: 0.85; margin-top: 3px; }
+  .nav-links { display: flex; gap: 34px; align-items: center; flex-wrap: wrap; }
+  .nav-links a:not(.btn-dark) { color: #fff; text-decoration: none; font-size: 14px; font-weight: 500; opacity: 0.9; transition: 0.2s; white-space: nowrap; }
+  .nav-links a:not(.btn-dark):hover { opacity: 1; }
+
+  .hero-content { padding: 75px 6% 70px; max-width: 1320px; margin: 0 auto; width: 100%; }
+  .hero-title { font-size: clamp(54px, 6vw, 78px); margin: 6px 0 22px; max-width: 620px; text-shadow: 0 4px 20px rgba(0,0,0,0.25); }
+  .hero-desc { font-size: 16.5px; max-width: 480px; opacity: 0.94; margin-bottom: 34px; line-height: 1.7; }
+  .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 55px; }
+  .hero-loc { font-size: 13px; color: #fff; opacity: 0.9; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; border-bottom: 1px dashed rgba(255,255,255,0.5); padding-bottom: 3px; transition: 0.2s; }
+  .hero-loc:hover { opacity: 1; border-bottom-color: #fff; }
+
+  /* 2. PRODUK SLIDER OTOMATIS */
+  .section-pad { padding: 100px 0; }
+  .prod-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin-bottom: 42px;
+    gap: 24px;
+  }
+  .prod-header h2 { font-size: 38px; margin: 0 0 14px; line-height: 1.2; letter-spacing: -0.5px; }
+  .prod-header p { font-size: 15px; color: var(--text-muted); max-width: 480px; margin: 0; }
+  .prod-note { font-size: 32px; color: var(--green-dark); transform: rotate(-4deg); text-align: center; }
+
+  .slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 12px 4px 28px 4px;
+  }
+  .slider-track {
+    display: flex;
+    gap: 28px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    cursor: grab;
+    user-select: none;
+  }
+  .slider-track:active { cursor: grabbing; }
+  .slider-track::-webkit-scrollbar { display: none; }
+
+  .prod-card {
+    flex: 0 0 290px;
+    scroll-snap-align: start;
+    background: #FAF8F4;
+    padding: 14px 14px 22px;
+    border-radius: 16px;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.35s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .prod-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 36px rgba(28, 58, 39, 0.11);
+  }
+  .prod-img-wrap {
+    width: 100%;
+    height: 240px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 18px;
+    background: var(--bg-card);
+  }
+  .prod-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+    transition: transform 0.55s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  .prod-card:hover .prod-img-wrap img { transform: scale(1.09); }
+  .prod-card h3 { font-size: 18.5px; margin: 0 6px 6px; transition: color 0.25s; }
+  .prod-card:hover h3 { color: var(--green-dark); }
+  .prod-card p { font-size: 13.5px; color: var(--text-muted); margin: 0 6px 16px; }
+  .link-arrow {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--green-dark);
+    text-decoration: none;
+    border-bottom: 1.5px solid var(--green-dark);
+    padding-bottom: 2px;
+    margin-left: 6px;
+    display: inline-block;
+    transition: transform 0.25s ease;
+  }
+  .prod-card:hover .link-arrow { transform: translateX(5px); }
+
+  .slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #D5D0C5;
+    transition: all 0.35s ease;
+    cursor: pointer;
+  }
+  .dot.active {
+    width: 24px;
+    border-radius: 10px;
+    background: var(--green-dark);
+  }
+
+  /* 3. BANNER TENGAH */
+  .story-banner {
+    background-color: var(--bg-card);
+    background-image: 
+      linear-gradient(90deg, rgba(234, 230, 220, 0.1) 0%, rgba(234, 230, 220, 0.88) 48%, rgba(234, 230, 220, 0.98) 100%),
+      var(--bg-story-1),
+      var(--bg-story-2);
+    background-size: cover;
+    background-position: center;
+    padding: 95px 0;
+  }
+  .story-grid { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 50px; }
+  .story-quote { font-size: 44px; color: var(--text-main); transform: rotate(-3deg); text-align: center; }
+  .story-text p { font-size: 15px; color: #353E37; margin: 0 0 18px; max-width: 480px; }
+
+  /* 4. ROMBONGAN & SEKOLAH */
+  .split-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 64px; align-items: center; }
+  .split-grid h2 { font-size: 36px; margin: 0 0 16px; line-height: 1.22; letter-spacing: -0.5px; }
+  .split-grid p.desc { font-size: 15px; color: var(--text-muted); margin: 0 0 30px; }
+  .mini-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 32px; }
+  .mini-card {
+    background: #FAF8F4;
+    padding: 20px 16px;
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .mini-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(28, 58, 39, 0.08);
+    border-color: rgba(28, 58, 39, 0.25);
+  }
+  .icon-img { width: 42px; height: 42px; object-fit: contain; border-radius: 8px; margin-bottom: 12px; display: block; }
+  .mini-card h4 { font-size: 14.5px; margin: 0 0 6px; color: var(--text-main); }
+  .mini-card p { font-size: 12px; color: var(--text-muted); margin: 0; line-height: 1.45; }
+  .img-rounded {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+    max-height: 430px;
+    background: var(--bg-card);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease;
+  }
+  .img-rounded:hover { transform: scale(1.015); }
+
+  /* 5. VILLA & RESORT */
+  .villa-features { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-bottom: 34px; }
+  .v-item {
+    border-left: 1px solid #D5D0C5;
+    padding-left: 14px;
+    transition: transform 0.25s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .v-item:hover { transform: translateY(-4px); }
+  .v-item:hover h5 { color: var(--green-dark); text-decoration: underline; }
+  .v-item:first-child { border-left: none; padding-left: 0; }
+  .v-icon-img { width: 38px; height: 38px; object-fit: contain; border-radius: 50%; margin-bottom: 10px; display: block; }
+  .v-item h5 { font-size: 13px; margin: 0 0 4px; transition: color 0.2s; }
+  .v-item p { font-size: 11.5px; color: var(--text-muted); margin: 0; line-height: 1.4; }
+
+  /* 6. GIFT BOX */
+  .gift-section { background-color: var(--bg-card-light); padding: 80px 0; border-top: 1px solid #E2DDD0; border-bottom: 1px solid #E2DDD0; }
+  .gift-grid { display: grid; grid-template-columns: 1fr 1.35fr 1fr; gap: 48px; align-items: center; }
+  .check-list { list-style: none; padding: 0; margin: 16px 0 26px; font-size: 14.5px; }
+  .check-list li { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+  .btn-beige { display: inline-block; background: #DCD5C5; color: var(--text-main); padding: 13px 26px; border-radius: 50px; text-decoration: none; font-size: 13.5px; font-weight: 600; transition: 0.25s; cursor: pointer; }
+  .btn-beige:hover { background: #CFC7B4; transform: translateY(-2px); }
+
+  /* 7. TENTANG KAMI */
+  .about-banner {
+    background-color: var(--green-deeper);
+    background-image: 
+      linear-gradient(90deg, rgba(16, 30, 21, 0.84) 0%, rgba(16, 30, 21, 0.42) 58%, rgba(16, 30, 21, 0.15) 100%),
+      var(--bg-about-1),
+      var(--bg-about-2);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 110px 0;
+  }
+  .about-flex { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; }
+  .about-content { max-width: 520px; }
+  .about-content h2 { font-size: 38px; margin: 6px 0 18px; }
+  .about-content p { font-size: 15px; opacity: 0.92; margin: 0 0 16px; }
+  .about-quote { font-size: 42px; transform: rotate(-4deg); text-align: right; }
+
+  /* 8. CARA PEMESANAN */
+  .steps-header { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; margin-bottom: 42px; }
+  .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr) auto; gap: 28px; align-items: center; }
+  .step-item { background: #FAF8F4; padding: 22px 20px; border-radius: 14px; border: 1px solid rgba(0,0,0,0.04); }
+  .step-num { display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 700; margin-bottom: 8px; }
+  .step-num span { background: var(--green-dark); color: #fff; width: 26px; height: 26px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; }
+  .step-item p { font-size: 13px; color: var(--text-muted); margin: 0; }
+
+  /* 9. FAQ & CTA */
+  .bottom-cta { display: grid; grid-template-columns: 1fr 1.15fr 1.55fr; background: var(--green-deeper); color: #fff; }
+  .bottom-cta-img { background-color: var(--green-dark); background-image: var(--bg-end-1), var(--bg-end-2); background-size: cover; background-position: center; min-height: 380px; }
+  .bottom-cta-mid { padding: 65px 48px; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid rgba(255,255,255,0.1); }
+  .bottom-cta-faq { padding: 65px 55px; }
+  details { border-bottom: 1px solid rgba(255,255,255,0.15); padding: 14px 0; cursor: pointer; }
+  summary { font-size: 14.5px; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-size: 18px; opacity: 0.8; }
+  details[open] summary::after { content: "−"; }
+  details p { font-size: 13.5px; color: #B8C7BD; margin: 10px 0 0; }
+
+  /* 10. FOOTER */
+  footer { padding: 45px 6%; max-width: 1320px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; font-size: 13px; color: var(--text-muted); }
+  .footer-logo { height: 40px; width: auto; object-fit: contain; }
+  .footer-loc { color: var(--text-muted); text-decoration: none; border-bottom: 1px dashed var(--text-muted); padding-bottom: 2px; transition: 0.2s; }
+  .footer-loc:hover { color: var(--green-dark); border-bottom-color: var(--green-dark); }
+
+  /* TOMBOL WHATSAPP MENGAMBANG (FLOATING CTA) */
+  .floating-wa {
+    position: fixed;
+    bottom: 26px;
+    right: 26px;
+    background-color: #1F5132;
+    color: #fff;
+    padding: 13px 22px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 10px 26px rgba(18, 38, 26, 0.32);
+    border: 1px solid rgba(255,255,255,0.2);
+    z-index: 999;
+    transition: all 0.3s ease;
+  }
+  .floating-wa:hover {
+    background-color: var(--green-deeper);
+    transform: translateY(-3px) scale(1.02);
+  }
+  .wa-dot {
+    width: 9px;
+    height: 9px;
+    background-color: #4ADE80;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px #4ADE80;
+  }
+
+  @media (max-width: 1024px) {
+    .split-grid, .story-grid, .gift-grid, .bottom-cta { grid-template-columns: 1fr; }
+    .steps-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 680px) {
+    .mini-cards, .steps-grid { grid-template-columns: 1fr; }
+    .villa-features { grid-template-columns: repeat(2, 1fr); }
+    .navbar { justify-content: center; text-align: center; }
+    .nav-links { justify-content: center; gap: 16px; }
+    .floating-wa span.wa-label { display: none; }
+    .floating-wa { padding: 14px 16px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- 1. HERO & NAVBAR -->
+  <div class="hero-wrapper">
+    <div class="navbar-outer">
+      <nav class="navbar">
+        <a href="#" class="brand-wrapper">
+          <img data-asset="logo" alt="Logo Cipancar Local" class="logo-img">
+          <div class="brand-text">
+            <span class="brand-main">CIPANCAR</span>
+            <span class="brand-sub">LOCAL</span>
+          </div>
+        </a>
+        <div class="nav-links">
+          <a href="#produk">Produk</a>
+          <a href="#rombongan">Rombongan</a>
+          <a href="#villa">Villa & Resort</a>
+          <a href="#tentang">Tentang Kami</a>
+          <a href="#" data-wa="umum" class="btn-dark">💬 Pesan Sekarang</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="hero-content">
+      <div class="tag" style="color:#D5E0D7;">CIPANCAR LOCAL</div>
+      <h1 class="hero-title handwritten">Bawa Pulang<br>Rasa & Cerita<br>dari Kampung Kami.</h1>
+      <p class="hero-desc">Produk lokal, hasil bumi, dan buah tangan pilihan dari Cipancar untuk menemani perjalanan Anda.</p>
+      <div class="hero-btns">
+        <a href="#" data-wa="hero" class="btn-dark">💬 Pesan via WhatsApp</a>
+        <a href="#produk" class="btn-outline-white">Jelajahi Produk</a>
+      </div>
+      <div>
+        <a href="https://maps.app.goo.gl/SRe5ry5mwE3AvsiR9" target="_blank" rel="noopener" class="hero-loc">
+          📍 Desa Cipancar • Serangpanjang • Subang ↗
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. PRODUK PILIHAN (SLIDER OTOMATIS + TEMPLATE WA PER PRODUK) -->
+  <section id="produk" class="section-pad container">
+    <div class="prod-header">
+      <div>
+        <div class="tag">PRODUK PILIHAN</div>
+        <h2>Apa yang Bisa<br>Kamu Bawa Pulang?</h2>
+        <p>Dari camilan sederhana hingga hasil bumi pilihan, kami mengumpulkan berbagai produk yang menjadi bagian dari kehidupan kampung kami.</p>
+      </div>
+      <div class="prod-note handwritten">Hasil bumi terbaik<br>dari Cipancar 🌿</div>
+    </div>
+
+    <!-- Track Slider Otomatis -->
+    <div class="slider-container">
+      <div class="slider-track" id="productSlider">
+        <!-- Kartu 1: Keripik Pisang -->
+        <a href="#" data-wa="keripik" class="prod-card">
+          <div class="prod-img-wrap"><img data-asset="keripik" alt="Keripik Pisang"></div>
+          <h3>Keripik Pisang</h3>
+          <p>Rasa yang menemani perjalanan.</p>
+          <span class="link-arrow">Pesan Keripik →</span>
+        </a>
+        <!-- Kartu 2: Nanas Simadu -->
+        <a href="#" data-wa="nanas" class="prod-card">
+          <div class="prod-img-wrap"><img data-asset="nanas" alt="Nanas Simadu"></div>
+          <h3>Nanas Simadu</h3>
+          <p>Segar dari tanah kami.</p>
+          <span class="link-arrow">Pesan Nanas →</span>
+        </a>
+        <!-- Kartu 3: Gula Aren -->
+        <a href="#" data-wa="gula" class="prod-card">
+          <div class="prod-img-wrap"><img data-asset="gula" alt="Gula Aren"></div>
+          <h3>Gula Aren</h3>
+          <p>Manisnya tradisi kampung.</p>
+          <span class="link-arrow">Pesan Gula Aren →</span>
+        </a>
+        <!-- Kartu 4: Alpukat -->
+        <a href="#" data-wa="alpukat" class="prod-card">
+          <div class="prod-img-wrap"><img data-asset="alpukat" alt="Alpukat"></div>
+          <h3>Alpukat</h3>
+          <p>Hasil bumi dari petani kami.</p>
+          <span class="link-arrow">Pesan Alpukat →</span>
+        </a>
+        <!-- Kartu 5: Madu Hutan Asli -->
+        <a href="#" data-wa="madu" class="prod-card">
+          <div class="prod-img-wrap"><img data-asset="madu" alt="Madu Hutan Asli"></div>
+          <h3>Madu Hutan Asli</h3>
+          <p>Murninya kebaikan dari hutan kami.</p>
+          <span class="link-arrow">Pesan Madu Hutan →</span>
+        </a>
+        <!-- Kartu 6: Gift Box -->
+        <a href="#" data-wa="giftbox" class="prod-card">
+          <div class="prod-img-wrap"><img data-asset="giftphoto" alt="Cipancar Gift Box"></div>
+          <h3>Cipancar Gift Box</h3>
+          <p>Kemasan eksklusif buah tangan.</p>
+          <span class="link-arrow">Pesan Gift Box →</span>
+        </a>
+        <!-- Kartu 7: Welcome Gift -->
+        <a href="#" data-wa="welcome_gift" class="prod-card">
+          <div class="prod-img-wrap"><img data-asset="tamu" alt="Welcome Gift"></div>
+          <h3>Welcome Gift</h3>
+          <p>Sambutan hangat khas Cipancar.</p>
+          <span class="link-arrow">Pesan Paket Tamu →</span>
+        </a>
+      </div>
+
+      <!-- Indikator Titik Halus di Bawah -->
+      <div class="slider-dots" id="sliderDots">
+        <span class="dot active" onclick="jumpToSlide(0)"></span>
+        <span class="dot" onclick="jumpToSlide(1)"></span>
+        <span class="dot" onclick="jumpToSlide(2)"></span>
+        <span class="dot" onclick="jumpToSlide(3)"></span>
+        <span class="dot" onclick="jumpToSlide(4)"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. BANNER TENGAH -->
+  <section class="story-banner">
+    <div class="container story-grid">
+      <div class="story-quote handwritten">Datang Sebagai Tamu.<br>Pulang Membawa Cerita.</div>
+      <div class="story-text">
+        <p>Mungkin Anda datang untuk berlibur.<br>Mungkin datang bersama sekolah.<br>Mungkin hanya singgah sebentar.</p>
+        <p>Sebelum pulang, bawa sedikit rasa dari kampung kami untuk dibagikan kepada keluarga, teman, atau orang-orang di rumah.</p>
+        <a href="#produk" class="btn-dark" style="margin-top:8px;">Cari Oleh-Oleh →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. ROMBONGAN & SEKOLAH -->
+  <section id="rombongan" class="section-pad container">
+    <div class="split-grid">
+      <div>
+        <div class="tag">ROMBONGAN & SEKOLAH</div>
+        <h2>Untuk Mereka yang<br>Datang Bersama</h2>
+        <p class="desc">Perjalanan bersama teman dan guru akan selalu punya cerita sendiri. Lengkapi trip observasi, study tour, dan kunjungan rombongan dengan buah tangan dari kampung yang mereka kunjungi.</p>
+        <div class="mini-cards">
+          <a href="#" data-wa="paket_siswa" class="mini-card">
+            <img data-asset="siswa" alt="Paket Siswa" class="icon-img">
+            <h4>Paket Siswa</h4>
+            <p>Oleh-oleh praktis untuk peserta.</p>
+          </a>
+          <a href="#" data-wa="paket_guru" class="mini-card">
+            <img data-asset="guru" alt="Paket Guru" class="icon-img">
+            <h4>Paket Guru</h4>
+            <p>Pilihan produk dengan kemasan lebih spesial.</p>
+          </a>
+          <a href="#" data-wa="paket_rombongan" class="mini-card">
+            <img data-asset="rombongan" alt="Paket Rombongan" class="icon-img">
+            <h4>Paket Rombongan</h4>
+            <p>Disesuaikan dengan jumlah peserta dan anggaran.</p>
+          </a>
+        </div>
+        <a href="#" data-wa="tanya_rombongan" class="btn-dark">Tanyakan Paket →</a>
+      </div>
+      <div>
+        <div class="handwritten" style="font-size:28px; color:var(--text-muted); margin-bottom:14px; text-align:left;">Lebih dari sekadar oleh-oleh,<br>ini tentang pengalaman. 🌿</div>
+        <img data-asset="pengalaman" alt="Rombongan Sekolah" class="img-rounded">
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. VILLA & RESORT -->
+  <section id="villa" class="section-pad container" style="padding-top:10px;">
+    <div class="split-grid">
+      <div><img data-asset="tamu" alt="Welcome Gift Villa" class="img-rounded"></div>
+      <div>
+        <div class="tag">VILLA & RESORT</div>
+        <h2>Berikan Tamu Anda<br>Sesuatu untuk Dibawa Pulang.</h2>
+        <p class="desc">Karena pengalaman menginap tidak harus berakhir ketika tamu check-out.</p>
+        <div class="villa-features">
+          <a href="#" data-wa="welcome_gift" class="v-item">
+            <img data-asset="welcome" alt="Welcome Gift" class="v-icon-img">
+            <h5>Welcome Gift</h5>
+            <p>Sambutan hangat produk lokal.</p>
+          </a>
+          <a href="#" data-wa="local_snack" class="v-item">
+            <img data-asset="snack" alt="Local Snack" class="v-icon-img">
+            <h5>Local Snack</h5>
+            <p>Camilan khas menginap.</p>
+          </a>
+          <a href="#" data-wa="guest_souvenir" class="v-item">
+            <img data-asset="souvenir" alt="Guest Souvenir" class="v-icon-img">
+            <h5>Guest Souvenir</h5>
+            <p>Oleh-oleh khas Cipancar.</p>
+          </a>
+          <a href="#" data-wa="villa_giftbox" class="v-item">
+            <img data-asset="gifticon" alt="Gift Box" class="v-icon-img">
+            <h5>Gift Box</h5>
+            <p>Kemasan eksklusif.</p>
+          </a>
+          <a href="#" data-wa="bulk_order" class="v-item">
+            <img data-asset="bulk" alt="Bulk Order" class="v-icon-img">
+            <h5>Bulk Order</h5>
+            <p>Pasokan hospitality.</p>
+          </a>
+        </div>
+        <a href="#" data-wa="mitra_villa" class="btn-dark">Kerja Sama dengan Kami →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CIPANCAR GIFT BOX -->
+  <section class="gift-section">
+    <div class="container gift-grid">
+      <div>
+        <div class="tag">CIPANCAR GIFT BOX</div>
+        <h2 style="font-size:34px; margin:6px 0 14px; line-height:1.22;">Sedikit Rasa<br>dari Kampung Kami.</h2>
+        <p style="font-size:15px; color:var(--text-muted); margin-bottom:26px;">Dipilih untuk dibagikan. Dikemas untuk dibawa pulang.</p>
+        <a href="#" data-wa="giftbox" class="btn-dark">Lihat Pilihan Box →</a>
+      </div>
+      <div><img data-asset="giftphoto" alt="Cipancar Gift Box" class="img-rounded" style="max-height:310px;"></div>
+      <div>
+        <h4 style="margin:0 0 12px; font-size:17px;">Isi dalam satu box:</h4>
+        <ul class="check-list">
+          <li>✔ Keripik Pisang</li>
+          <li>✔ Gula Aren & Madu Hutan</li>
+          <li>✔ Produk lokal pilihan</li>
+          <li>✔ Packaging eksklusif</li>
+        </ul>
+        <a href="#" data-wa="custom_box" class="btn-beige">Custom Your Box →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. TENTANG KAMI -->
+  <section id="tentang" class="about-banner">
+    <div class="container about-flex">
+      <div class="about-content">
+        <div class="tag" style="color:#D5E0D7;">TENTANG KAMI</div>
+        <h2>Ini Kampung Kami.</h2>
+        <p>Tempat kami tinggal. Tempat hasil bumi ini tumbuh. Tempat produk-produk ini dibuat. Dan tempat cerita ini dimulai.</p>
+        <p>Kami mungkin tidak bisa membawa seluruh Cipancar untuk Anda. Tapi kami bisa mengirimkan sedikit rasanya untuk dibawa pulang.</p>
+        <a href="#" data-wa="tentang" class="btn-dark" style="margin-top:14px;">Hubungi Kampung Kami →</a>
+      </div>
+      <div class="about-quote handwritten">Dari kampung kecil,<br>untuk cerita besar.</div>
+    </div>
+  </section>
+
+  <!-- 8. CARA PEMESANAN -->
+  <section class="section-pad container">
+    <div class="steps-header">
+      <div>
+        <h2 style="margin:0; font-size:34px;">Cara Pemesanan</h2>
+        <p style="margin:4px 0 0; font-size:20px; color:var(--text-muted);">Mudah dan Praktis</p>
+      </div>
+      <div class="handwritten" style="font-size:28px; color:var(--green-dark);">Bisa langsung<br>via WhatsApp ✈️</div>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-item"><div class="step-num"><span>01</span> Pilih Produk</div><p>Lihat pilihan produk atau paket sesuai kebutuhan.</p></div>
+      <div class="step-item"><div class="step-num"><span>02</span> Hubungi Kami</div><p>Chat via WhatsApp dengan pesan jelas.</p></div>
+      <div class="step-item"><div class="step-num"><span>03</span> Konfirmasi</div><p>Tentukan jumlah, tanggal, dan kebutuhan.</p></div>
+      <div class="step-item"><div class="step-num"><span>04</span> Pesanan Siap</div><p>Ambil langsung atau kami kirimkan.</p></div>
+      <div style="text-align:right;"><a href="#" data-wa="cara_pesan" class="btn-dark">Pesan Sekarang →</a></div>
+    </div>
+  </section>
+
+  <!-- 9. FAQ & CTA -->
+  <section class="bottom-cta">
+    <div class="bottom-cta-img"></div>
+    <div class="bottom-cta-mid">
+      <div style="font-size:13.5px; opacity:0.85; margin-bottom:8px;">Sudah waktunya pulang?</div>
+      <h2 style="font-size:28px; margin:0 0 24px; line-height:1.3;">Bawa Pulang Rasa & Cerita dari Kampung Kami.</h2>
+      <div><a href="#" data-wa="cta_bawah" class="btn-outline-white">💬 Pesan via WhatsApp</a></div>
+    </div>
+    <div class="bottom-cta-faq">
+      <h3 style="margin:0 0 18px; font-size:19px;">Pertanyaan yang Sering Diajukan</h3>
+      <details><summary>Apakah bisa pesan dalam jumlah banyak?</summary><p>Bisa, kami melayani pemesanan partai besar untuk rombongan sekolah dan villa.</p></details>
+      <details><summary>Apakah bisa custom paket?</summary><p>Tentu, isi paket maupun Gift Box dapat disesuaikan dengan anggaran.</p></details>
+      <details><summary>Bisa pesan sebelum datang ke Cipancar?</summary><p>Sangat bisa, pesan via WhatsApp agar pesanan siap saat Anda tiba.</p></details>
+      <details><summary>Berapa lama sebelum pemesanan?</summary><p>Minimal H-1 untuk satuan, dan H-3 sampai H-7 untuk rombongan besar.</p></details>
+      <details><summary>Apakah produk tersedia sepanjang tahun?</summary><p>Olahan dan madu hutan tersedia setiap saat, buah segar menyesuaikan musim panen.</p></details>
+    </div>
+  </section>
+
+  <!-- 10. FOOTER -->
+  <footer>
+    <a href="#" class="brand-wrapper" style="color: var(--text-main);">
+      <img data-asset="logo" alt="Logo" class="footer-logo">
+      <div class="brand-text">
+        <span class="brand-main" style="font-size:16px;">CIPANCAR</span>
+        <span class="brand-sub" style="font-size:8.5px;">LOCAL</span>
+      </div>
+    </a>
+    <div class="handwritten" style="font-size:22px; color:var(--text-main);">Bawa Pulang Rasa & Cerita dari Kampung Kami.</div>
+    <div>
+      <a href="https://maps.app.goo.gl/SRe5ry5mwE3AvsiR9" target="_blank" rel="noopener" class="footer-loc">📍 Desa Cipancar, Serangpanjang, Subang ↗</a>
+    </div>
+    <div>© 2026 Cipancar Local</div>
+  </footer>
+
+  <!-- TOMBOL WHATSAPP MENGAMBANG -->
+  <a href="#" data-wa="umum" class="floating-wa" title="Chat WhatsApp Cipancar Local">
+    <span class="wa-dot"></span>
+    <span>💬</span>
+    <span class="wa-label">Chat Cipancar Local</span>
+  </a>
+
+  <!-- SCRIPT WHATSAPP OTOMATIS, SLIDER, & PEMUAT GAMBAR -->
+  <script>
+    // 1. KONFIGURASI NOMOR WHATSAPP & TEMPLATE PESAN KHUSUS TIAP PRODUK/JASA
+    const WA_PHONE = "6281312251219"; // 081312251219
+
+    const waTemplates = {
+      umum: "Halo Admin Cipancar Local, saya ingin bertanya mengenai produk oleh-oleh dan hasil bumi Cipancar.",
+      hero: "Halo Admin Cipancar Local, saya tertarik untuk memesan buah tangan dan produk lokal khas Cipancar. Boleh minta info katalog & harganya?",
+      
+      // Template Spesifik per Produk
+      keripik: "Halo Admin Cipancar Local, saya tertarik dengan produk *Keripik Pisang*. Boleh info detail varian, harga, dan ketersediaannya?",
+      nanas: "Halo Admin Cipancar Local, saya ingin memesan *Nanas Simadu* segar khas Cipancar. Boleh info harga dan ketersediaannya saat ini?",
+      gula: "Halo Admin Cipancar Local, saya tertarik dengan *Gula Aren* asli kampung Cipancar. Boleh info detail ukuran, harga, dan stoknya?",
+      alpukat: "Halo Admin Cipancar Local, saya ingin menanyakan ketersediaan hasil bumi *Alpukat* Cipancar. Boleh info harga per kilogramnya?",
+      madu: "Halo Admin Cipancar Local, saya tertarik dengan *Madu Hutan Asli* Cipancar. Boleh info ukuran kemasan dan harganya?",
+      
+      // Template Paket Rombongan & Sekolah
+      paket_siswa: "Halo Admin Cipancar Local, saya ingin menanyakan detail & harga *Paket Siswa* (oleh-oleh praktis untuk peserta rombongan sekolah).",
+      paket_guru: "Halo Admin Cipancar Local, saya tertarik dengan *Paket Guru* (kemasan spesial oleh-oleh Cipancar). Boleh info pilihan isi dan harganya?",
+      paket_rombongan: "Halo Admin Cipancar Local, kami ingin berdiskusi mengenai *Paket Rombongan* yang disesuaikan dengan jumlah peserta dan anggaran kami.",
+      tanya_rombongan: "Halo Admin Cipancar Local, kami berencana mengadakan kunjungan/observasi/study tour ke Cipancar dan ingin menanyakan *Paket Oleh-Oleh Rombongan & Sekolah*.",
+      
+      // Template Layanan Villa & Resort (Hospitality)
+      welcome_gift: "Halo Admin Cipancar Local, saya tertarik dengan paket *Welcome Gift* produk lokal untuk sambutan tamu menginap. Boleh info detailnya?",
+      local_snack: "Halo Admin Cipancar Local, saya ingin menanyakan paket *Local Snack* (camilan khas Cipancar) untuk suguhan tamu menginap di tempat kami.",
+      guest_souvenir: "Halo Admin Cipancar Local, saya tertarik dengan *Guest Souvenir* oleh-oleh khas Cipancar untuk tamu kami.",
+      villa_giftbox: "Halo Admin Cipancar Local, saya ingin menanyakan *Gift Box Eksklusif* untuk kebutuhan tamu Villa/Resort.",
+      bulk_order: "Halo Admin Cipancar Local, saya ingin menanyakan pemesanan partai besar (*Bulk Order*) pasokan produk lokal untuk kebutuhan hospitality.",
+      mitra_villa: "Halo Admin Cipancar Local, saya dari pengelola Villa/Resort/Penginapan tertarik untuk *Kerja Sama Penyediaan Produk Lokal* bagi tamu kami.",
+      
+      // Template Gift Box & Lainnya
+      giftbox: "Halo Admin Cipancar Local, saya tertarik dengan *Cipancar Gift Box* (Keripik Pisang, Gula Aren, Madu Hutan, & Produk Pilihan). Boleh lihat pilihan paket dan harganya?",
+      custom_box: "Halo Admin Cipancar Local, saya ingin *Custom Gift Box* oleh-oleh khas Cipancar. Boleh bantu rekomendasikan isi produk sesuai anggaran saya?",
+      tentang: "Halo Admin Cipancar Local, salam kenal! Saya ingin tahu lebih lanjut mengenai produk warga Desa Cipancar.",
+      cara_pesan: "Halo Admin Cipancar Local, saya sudah melihat katalog di website dan ingin melakukan pemesanan produk:\n\n- Produk/Paket: \n- Jumlah: \n- Tanggal ambil/kirim: ",
+      cta_bawah: "Halo Admin Cipancar Local, sebelum pulang dari Cipancar saya ingin memesan oleh-oleh khas kampung Cipancar. Apakah masih bisa dipesan untuk hari ini/besok?"
+    };
+
+    // Pasang link WhatsApp otomatis ke seluruh elemen yang memiliki atribut data-wa
+    let isDraggingSlider = false;
+    document.querySelectorAll('[data-wa]').forEach(function(el) {
+      const key = el.getAttribute('data-wa');
+      const message = waTemplates[key] || waTemplates.umum;
+      el.href = "https://wa.me/" + WA_PHONE + "?text=" + encodeURIComponent(message);
+      el.target = "_blank";
+      el.rel = "noopener noreferrer";
+
+      // Cegah klik tidak sengaja saat user sedang men-drag slider dengan mouse
+      el.addEventListener('click', function(e) {
+        if (isDraggingSlider) {
+          e.preventDefault();
+        }
+      });
+    });
+
+    // 2. SLIDER OTOMATIS + DRAG MOUSE
+    const sliderTrack = document.getElementById('productSlider');
+    const dots = document.querySelectorAll('#sliderDots .dot');
+    const cardStep = 318;
+    let autoSlideInterval;
+
+    function updateDots() {
+      if (!sliderTrack || !dots.length) return;
+      const index = Math.round(sliderTrack.scrollLeft / cardStep) % dots.length;
+      dots.forEach((d, i) => d.classList.toggle('active', i === index));
+    }
+
+    function slideProducts(direction) {
+      if (!sliderTrack) return;
+      const maxScroll = sliderTrack.scrollWidth - sliderTrack.clientWidth;
+
+      if (direction === 1 && sliderTrack.scrollLeft >= maxScroll - 15) {
+        sliderTrack.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        sliderTrack.scrollBy({ left: direction * cardStep, behavior: 'smooth' });
+      }
+      setTimeout(updateDots, 350);
+    }
+
+    function jumpToSlide(index) {
+      stopAutoSlide();
+      sliderTrack.scrollTo({ left: index * cardStep, behavior: 'smooth' });
+      setTimeout(updateDots, 350);
+      startAutoSlide();
+    }
+
+    function startAutoSlide() {
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = setInterval(function() {
+        slideProducts(1);
+      }, 2800);
+    }
+
+    function stopAutoSlide() {
+      clearInterval(autoSlideInterval);
+    }
+
+    if (sliderTrack) {
+      startAutoSlide();
+      sliderTrack.addEventListener('scroll', updateDots, { passive: true });
+      sliderTrack.addEventListener('mouseenter', stopAutoSlide);
+      sliderTrack.addEventListener('mouseleave', startAutoSlide);
+      sliderTrack.addEventListener('touchstart', stopAutoSlide, { passive: true });
+      sliderTrack.addEventListener('touchend', startAutoSlide, { passive: true });
+
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      sliderTrack.addEventListener('mousedown', (e) => {
+        isDown = true;
+        isDraggingSlider = false;
+        startX = e.pageX - sliderTrack.offsetLeft;
+        scrollLeft = sliderTrack.scrollLeft;
+        sliderTrack.style.scrollBehavior = 'auto';
+      });
+      sliderTrack.addEventListener('mouseleave', () => {
+        isDown = false;
+        sliderTrack.style.scrollBehavior = 'smooth';
+      });
+      sliderTrack.addEventListener('mouseup', () => {
+        isDown = false;
+        sliderTrack.style.scrollBehavior = 'smooth';
+        setTimeout(() => { isDraggingSlider = false; }, 50);
+      });
+      sliderTrack.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        const x = e.pageX - sliderTrack.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        if (Math.abs(walk) > 8) {
+          isDraggingSlider = true;
+        }
+        e.preventDefault();
+        sliderTrack.scrollLeft = scrollLeft - walk;
+      });
+    }
+
+    // 3. PEMUAT GAMBAR & FAVICON OTOMATIS
+    const driveLinks = {
+      logo: "https://drive.google.com/file/d/1EhTcy0SfhcCEgW1EmlNFXSkciRCTWGNF/view?usp=sharing",
+      heroBg: "https://drive.google.com/file/d/1HdpIzLL5mfiM4yJOf2SnsCo9ZBml87Va/view?usp=sharing",
+      keripik: "https://drive.google.com/file/d/1sEGVmtKMfY8RXCZ0YdjRbsuP8impZwVK/view?usp=sharing",
+      nanas: "https://drive.google.com/file/d/1X_rSRc7677PVj9mex0U1-TYQy69FHHnt/view?usp=sharing",
+      gula: "https://drive.google.com/file/d/1wDl6BPDGtLXPW68UOEbMcANeHUk0HzD-/view?usp=sharing",
+      alpukat: "https://drive.google.com/file/d/1MLd_FPr_HmFth8bg6f93c1JJjK9Ve4IK/view?usp=sharing",
+      madu: "https://drive.google.com/file/d/1_OUGvnxDoi3ofbjPqSwFzm4E1EcwTaxl/view?usp=sharing",
+      storyBg: "https://drive.google.com/file/d/1zOLDJhqFe9f3FGuLtbTyZdAWmupIGJnL/view?usp=sharing",
+      siswa: "https://drive.google.com/file/d/14D71HTuzA-6jeFzerGd71q2RA18aOpln/view?usp=sharing",
+      guru: "https://drive.google.com/file/d/1519oPT-VlBuZBgcqhzzRJGvOp428P663/view?usp=sharing",
+      rombongan: "https://drive.google.com/file/d/1FfQxF--caRhoXSAjRZCht12TOXENKKOt/view?usp=sharing",
+      pengalaman: "https://drive.google.com/file/d/1FPWgP2a04jlv2OucCPSu_N4ykVjVl0xl/view?usp=sharing",
+      tamu: "https://drive.google.com/file/d/1rMaW9JiNpBEow6AD38tnVwr6E57TfH2d/view?usp=sharing",
+      welcome: "https://drive.google.com/file/d/189_cqjToZVu1PCTrN-FdLwjcq8mdPf8_/view?usp=sharing",
+      snack: "https://drive.google.com/file/d/1zI1p4OoFBb29EmZPSg81s_MbXSOMs0Xk/view?usp=sharing",
+      souvenir: "https://drive.google.com/file/d/13Ly2kOelgK0mxi927tNtZb4xdlqCEfew/view?usp=sharing",
+      gifticon: "https://drive.google.com/file/d/1g3oNsoqBvsR3bSuwmZGLpDWQF0Xs-xUk/view?usp=sharing",
+      bulk: "https://drive.google.com/file/d/1LqFW1Mg1LErDZzguQovIMXCfQD7mSJiJ/view?usp=sharing",
+      giftphoto: "https://drive.google.com/file/d/1VP_HfzmXd01V1V-c7UefJeF9A7CtcynY/view?usp=sharing",
+      aboutBg: "https://drive.google.com/file/d/16aXhdBetmnorIMwpxZ1ssmdydGOLIoC0/view?usp=sharing",
+      endBg: "https://drive.google.com/file/d/1bijWLDzr87yJwiPE33V8miQIHo7zxm4r/view?usp=sharing"
+    };
+
+    function extractKey(url) {
+      const m = url.match(/\/d\/([^\/]+)/);
+      return m ? m[1] : "";
+    }
+
+    // Set Favicon otomatis dari logo Cipancar Local
+    const logoKey = extractKey(driveLinks.logo);
+    const favEl = document.getElementById('dynamic-favicon');
+    if (logoKey && favEl) {
+      favEl.href = 'https://lh3.googleusercontent.com/d/' + logoKey + '=w128';
+    }
+
+    document.querySelectorAll('img[data-asset]').forEach(function(img) {
+      const keyName = img.getAttribute('data-asset');
+      const code = extractKey(driveLinks[keyName] || "");
+      if (code) {
+        img.src = 'https://lh3.googleusercontent.com/d/' + code + '=w1000';
+        img.onerror = function() {
+          this.onerror = null;
+          this.src = 'https://drive.google.com/thumbnail?id=' + code + '&sz=w1000';
+        };
+      }
+    });
+
+    const root = document.documentElement;
+    function applyBg(cssVar, assetName) {
+      const code = extractKey(driveLinks[assetName] || "");
+      if (code) {
+        root.style.setProperty(cssVar + '-1', 'url("https://lh3.googleusercontent.com/d/' + code + '=w1920")');
+        root.style.setProperty(cssVar + '-2', 'url("https://drive.google.com/thumbnail?id=' + code + '&sz=w1920")');
+      }
+    }
+
+    applyBg('--bg-hero', 'heroBg');
+    applyBg('--bg-story', 'storyBg');
+    applyBg('--bg-about', 'aboutBg');
+    applyBg('--bg-end', 'endBg');
+  </script>
+
+</body>
+</html>
