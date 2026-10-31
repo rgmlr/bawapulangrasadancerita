@@ -329,12 +329,35 @@
   .v-item h5 { font-size: 13px; margin: 0 0 4px; transition: color 0.2s; }
   .v-item p { font-size: 11.5px; color: var(--text-muted); margin: 0; line-height: 1.4; }
 
-  /* 6. GIFT BOX */
+  /* 6. GIFT BOX (PAKET CUSTOM 100K) */
   .gift-section { background-color: var(--bg-card-light); padding: 80px 0; border-top: 1px solid #E2DDD0; border-bottom: 1px solid #E2DDD0; }
-  .gift-grid { display: grid; grid-template-columns: 1fr 1.35fr 1fr; gap: 48px; align-items: center; }
-  .check-list { list-style: none; padding: 0; margin: 16px 0 26px; font-size: 14.5px; }
-  .check-list li { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
-  .btn-beige { display: inline-block; background: #DCD5C5; color: var(--text-main); padding: 13px 26px; border-radius: 50px; text-decoration: none; font-size: 13.5px; font-weight: 600; transition: 0.25s; cursor: pointer; }
+  .gift-grid { display: grid; grid-template-columns: 1fr 1.3fr 1.05fr; gap: 44px; align-items: center; }
+  .custom-box-card {
+    background: #FAF8F4;
+    padding: 26px 24px;
+    border-radius: 16px;
+    border: 1px solid rgba(28, 58, 39, 0.12);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.04);
+  }
+  .custom-box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .price-badge {
+    background: var(--green-dark);
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .check-list { list-style: none; padding: 0; margin: 12px 0 22px; font-size: 13.8px; }
+  .check-list li { margin-bottom: 9px; display: flex; align-items: center; gap: 10px; }
+  .btn-beige { display: inline-block; background: #DCD5C5; color: var(--text-main); padding: 13px 26px; border-radius: 50px; text-decoration: none; font-size: 13.5px; font-weight: 600; transition: 0.25s; cursor: pointer; text-align: center; width: 100%; }
   .btn-beige:hover { background: #CFC7B4; transform: translateY(-2px); }
 
   /* 7. TENTANG KAMI */
@@ -628,7 +651,7 @@
     </div>
   </section>
 
-    <!-- 6. CIPANCAR GIFT BOX (CONTOH PAKET CUSTOM 100K) -->
+  <!-- 6. CIPANCAR GIFT BOX (CONTOH PAKET CUSTOM 100K) -->
   <section class="gift-section">
     <div class="container gift-grid">
       <div>
@@ -640,19 +663,19 @@
       <div>
         <img data-asset="giftphoto" alt="Cipancar Gift Box" class="img-rounded" style="max-height:320px;">
       </div>
-      <div style="background: #FAF8F4; padding: 26px 24px; border-radius: 16px; border: 1px solid rgba(28, 58, 39, 0.12);">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
+      <div class="custom-box-card">
+        <div class="custom-box-header">
           <h4 style="margin:0; font-size:16.5px;">Contoh Paket Custom:</h4>
-          <span style="background:var(--green-dark); color:#fff; padding:4px 12px; border-radius:50px; font-size:13px; font-weight:700;">Rp 100.000 / Box</span>
+          <span class="price-badge">Rp 100.000 / Box</span>
         </div>
-        <ul class="check-list" style="margin: 12px 0 20px; font-size: 13.8px;">
+        <ul class="check-list">
           <li>✔ Keripik Pisang, Singkong & Talas</li>
           <li>✔ Gula Aren Asli</li>
           <li>✔ Nanas Simadu</li>
           <li>✔ Teh Asli Cipancar</li>
           <li>✔ Packaging Eksklusif</li>
         </ul>
-        <a href="#" data-wa="custom_box" class="btn-beige" style="width:100%; text-align:center;">Custom Isi Box Lainnya →</a>
+        <a href="#" data-wa="custom_box" class="btn-beige">Custom Isi Box Lainnya →</a>
       </div>
     </div>
   </section>
@@ -733,7 +756,6 @@
 
   <!-- SCRIPT WHATSAPP OTOMATIS, SLIDER, & PEMUAT GAMBAR -->
   <script>
-    // 1. KONFIGURASI NOMOR WHATSAPP & TEMPLATE PESAN KHUSUS TIAP PRODUK/JASA
     const WA_PHONE = "6281312251219"; // 081312251219
 
     const waTemplates = {
@@ -761,15 +783,14 @@
       bulk_order: "Halo Admin Cipancar Local, saya ingin menanyakan pemesanan partai besar (*Bulk Order*) pasokan produk lokal untuk kebutuhan hospitality.",
       mitra_villa: "Halo Admin Cipancar Local, saya dari pengelola Villa/Resort/Penginapan tertarik untuk *Kerja Sama Penyediaan Produk Lokal* bagi tamu kami.",
       
-      // Template Gift Box & Lainnya
-      giftbox: "Halo Admin Cipancar Local, saya tertarik dengan *Cipancar Gift Box* (Keripik Pisang, Gula Aren, Madu Hutan, & Produk Pilihan). Boleh lihat pilihan paket dan harganya?",
-      custom_box: "Halo Admin Cipancar Local, saya ingin *Custom Gift Box* oleh-oleh khas Cipancar. Boleh bantu rekomendasikan isi produk sesuai anggaran saya?",
+      // Template Gift Box & Paket Custom 100K
+      giftbox: "Halo Admin Cipancar Local, saya tertarik memesan *Paket Gift Box Rp100.000* (Isi: Keripik Pisang, Keripik Singkong, Keripik Talas, Gula Aren, Nanas, & Teh Asli). Boleh info ketersediaannya?",
+      custom_box: "Halo Admin Cipancar Local, saya melihat *Contoh Paket Custom 100K* (Keripik Pisang, Singkong, Talas, Gula, Nanas, Teh Asli) dan ingin konsultasi/custom isi box sesuai kebutuhan saya.",
       tentang: "Halo Admin Cipancar Local, salam kenal! Saya ingin tahu lebih lanjut mengenai produk warga Desa Cipancar.",
       cara_pesan: "Halo Admin Cipancar Local, saya sudah melihat katalog di website dan ingin melakukan pemesanan produk:\n\n- Produk/Paket: \n- Jumlah: \n- Tanggal ambil/kirim: ",
       cta_bawah: "Halo Admin Cipancar Local, sebelum pulang dari Cipancar saya ingin memesan oleh-oleh khas kampung Cipancar. Apakah masih bisa dipesan untuk hari ini/besok?"
     };
 
-    // Pasang link WhatsApp otomatis ke seluruh elemen yang memiliki atribut data-wa
     let isDraggingSlider = false;
     document.querySelectorAll('[data-wa]').forEach(function(el) {
       const key = el.getAttribute('data-wa');
@@ -778,7 +799,6 @@
       el.target = "_blank";
       el.rel = "noopener noreferrer";
 
-      // Cegah klik tidak sengaja saat user sedang men-drag slider dengan mouse
       el.addEventListener('click', function(e) {
         if (isDraggingSlider) {
           e.preventDefault();
@@ -786,7 +806,7 @@
       });
     });
 
-    // 2. SLIDER OTOMATIS + DRAG MOUSE
+    // SLIDER OTOMATIS + DRAG MOUSE
     const sliderTrack = document.getElementById('productSlider');
     const dots = document.querySelectorAll('#sliderDots .dot');
     const cardStep = 318;
@@ -868,7 +888,7 @@
       });
     }
 
-    // 3. PEMUAT GAMBAR & FAVICON OTOMATIS
+    // PEMUAT GAMBAR & FAVICON OTOMATIS
     const driveLinks = {
       logo: "https://drive.google.com/file/d/1EhTcy0SfhcCEgW1EmlNFXSkciRCTWGNF/view?usp=sharing",
       heroBg: "https://drive.google.com/file/d/1HdpIzLL5mfiM4yJOf2SnsCo9ZBml87Va/view?usp=sharing",
@@ -898,7 +918,6 @@
       return m ? m[1] : "";
     }
 
-    // Set Favicon otomatis dari logo Cipancar Local
     const logoKey = extractKey(driveLinks.logo);
     const favEl = document.getElementById('dynamic-favicon');
     if (logoKey && favEl) {
